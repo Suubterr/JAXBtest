@@ -5,20 +5,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "SAP_DOC_STATUS")
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class DocStatus {
+public class Definition {
+    @XmlAttribute(name = "name")
+    protected String name;
     @XmlAttribute(name = "value")
     protected String value;
-
-    public DocStatus() {
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }
