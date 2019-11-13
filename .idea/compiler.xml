@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tesst" />
         <module name="JAXBtest" />
+        <module name="tesst" />
       </profile>
     </annotationProcessing>
   </component>

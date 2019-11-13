@@ -62,4 +62,15 @@ public class Position {
     public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "dir='" + dir + '\'' +
+                ", oldname='" + oldname + '\'' +
+                ", newname='" + newname + '\'' +
+                ", info='" + info + '\'' +
+                ", quantity='" + quantity + '\'' +
+                '}';
+    }
 }

@@ -21,4 +21,11 @@ public class DocType {
     public void setValue(String value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "DocType{" +
+                "value='" + value + '\'' +
+                '}';
+    }
 }

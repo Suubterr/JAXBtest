@@ -21,4 +21,11 @@ public class EctrDtype {
 
     public EctrDtype() {
     }
+
+    @Override
+    public String toString() {
+        return "EctrDtype{" +
+                "value='" + value + '\'' +
+                '}';
+    }
 }

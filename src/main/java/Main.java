@@ -1,3 +1,9 @@
+import bundle.ProObject;
+import bundle.ProSAPInfoFile;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.List;
 
@@ -6,8 +12,11 @@ public class Main {
     static int k = 0;
 
     public static void main(String[] args) {
-        getFiles("D:\\INNEOxmls\\example-extracted_files_with_xmls riess\\XML");
-        System.out.println(k);
+        try {
+            xmlToPOJO();
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void getFiles(String f) {
@@ -19,12 +28,17 @@ public class Main {
             if(s.isDirectory()) {
                 getFiles(s.getAbsolutePath());
             } else {
-                xmlToPOJO(s);
+                System.out.println("yup");
             }
         }
     }
 
-    private static void xmlToPOJO(File file) {
+    private static void xmlToPOJO() throws JAXBException {
+        JAXBContext jc = JAXBContext.newInstance(ProSAPInfoFile.class);
 
+        Unmarshaller unm = jc.createUnmarshaller();
+        File xml = new File("D:\\INNEOxmls\\example-extracted_files_with_xmls riess\\XML\\00\\00\\00000000.xml");
+        ProSAPInfoFile psif = (ProSAPInfoFile) unm.unmarshal(xml);
+        System.out.println(psif.toString());
     }
 }

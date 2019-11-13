@@ -21,4 +21,11 @@ public class ExchangedAssembly {
     public void setValue(String value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "ExchangedAssembly{" +
+                "value='" + value + '\'' +
+                '}';
+    }
 }

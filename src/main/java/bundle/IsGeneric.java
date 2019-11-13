@@ -20,6 +20,12 @@ public class IsGeneric {
     }
 
     public IsGeneric() {
+    }
 
+    @Override
+    public String toString() {
+        return "IsGeneric{" +
+                "value='" + value + '\'' +
+                '}';
     }
 }

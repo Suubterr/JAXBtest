@@ -19,6 +19,13 @@ public class IsInstance {
         this.value = value;
     }
 
-    public IsInstance(String value) {
+    public IsInstance() {
+    }
+
+    @Override
+    public String toString() {
+        return "IsInstance{" +
+                "value='" + value + '\'' +
+                '}';
     }
 }

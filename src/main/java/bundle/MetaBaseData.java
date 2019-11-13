@@ -10,4 +10,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class MetaBaseData {
     @XmlElementRef(name = "definition")
     protected Definition definition = new Definition();
+
+    public Definition getDefinition() {
+        return definition;
+    }
+
+    public void setDefinition(Definition definition) {
+        this.definition = definition;
+    }
+
+    public MetaBaseData() {
+    }
+
+    @Override
+    public String toString() {
+        return "MetaBaseData{" +
+                "definition=" + definition +
+                '}';
+    }
 }

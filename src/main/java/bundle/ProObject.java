@@ -1,8 +1,10 @@
+package bundle;
+
 import bundle.*;
 
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "ProObject")
+@XmlRootElement(name = "bundle.ProObject")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProObject {
 
@@ -83,5 +85,31 @@ public class ProObject {
 
     public void setPath(String path) {
         this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        return "ProObject{" +
+                "name='" + name + '\'' +
+                ", path='" + path + '\'' +
+                ", SAP_DOC_NUMBER=" + SAP_DOC_NUMBER +
+                ", SAP_DOC_TYPE=" + SAP_DOC_TYPE +
+                ", SAP_DOC_PART=" + SAP_DOC_PART +
+                ", SAP_DOC_VERSION=" + SAP_DOC_VERSION +
+                ", SAP_DOC_STATUS=" + SAP_DOC_STATUS +
+                ", SAP_TYPE_COMPONENT=" + SAP_TYPE_COMPONENT +
+                ", SAP_IS_INSTANCE=" + SAP_IS_INSTANCE +
+                ", SAP_IS_GENERIC=" + SAP_IS_GENERIC +
+                ", SAP_NORM=" + SAP_NORM +
+                ", SAP_MODIFIED_FLAG=" + SAP_MODIFIED_FLAG +
+                ", SAP_POOL_MODEL=" + SAP_POOL_MODEL +
+                ", SAP_EXCHANGED_ASSEMBLY=" + SAP_EXCHANGED_ASSEMBLY +
+                ", SAP_CAD_DATE=" + SAP_CAD_DATE +
+                ", SAP_WSAPPLICATION=" + SAP_WSAPPLICATION +
+                ", ECTR_DTYPE=" + ECTR_DTYPE +
+                ", SAP_STORAGECATEGORY=" + SAP_STORAGECATEGORY +
+                ", BillOfDocuments=" + BillOfDocuments +
+                ", MetaBaseData=" + MetaBaseData +
+                '}';
     }
 }
